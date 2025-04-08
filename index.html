@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Buddy</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Travel Buddy</h1>
+  <nav>
+    <button onclick="showPage('explorer')">Country Explorer</button>
+    <button onclick="showPage('converter')">Currency Converter</button>
+    <button onclick="showPage('tips')">Travel Tips</button>
+  </nav>
+
+  <section id="explorer" class="page active">
+    <h2>Country Explorer</h2>
+    <input type="text" id="countryInput" placeholder="Enter a country name">
+    <button onclick="fetchCountry()">Search</button>
+    <div id="countryInfo" class="country-card"></div>
+  </section>
+
+  <section id="converter" class="page">
+    <h2>Currency Converter</h2>
+    <div class="converter">
+      <input type="number" id="amount" placeholder="Amount in USD">
+      <select id="currencySelect"></select>
+      <button onclick="convertCurrency()">Convert</button>
+      <p id="converted"></p>
+    </div>
+  </section>
+
+  <section id="tips" class="page">
+    <h2>Travel Tips</h2>
+    <div class="tips">
+      <p><strong>General Safety:</strong> Keep copies of your passport and stay aware of your surroundings.</p>
+      <p><strong>Language:</strong> Learn a few basic phrases in the local language.</p>
+      <p><strong>Customs:</strong> Respect local customs and dress codes, especially at religious sites.</p>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
