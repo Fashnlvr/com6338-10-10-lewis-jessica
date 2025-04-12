@@ -1,0 +1,143 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+    color: #333;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  .logo {
+    width: 100px;
+    padding: 0 0 0 20px;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: #333;
+    padding: 0.5rem 1rem;
+  }
+  
+  .nav-links a.active {
+    background-color: #c6f1e7;
+    border-radius: 20px;
+  }
+  
+  .hero {
+    background: url('/images/neom-STV2s3FYw7Y-unsplash.jpg');
+    background-size: cover;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    height: 20vh;
+    padding: 100px 100px;
+    color: white;
+    text-align: center;
+  }
+  
+  .hero h1 {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+  
+  .converter-section {
+    background-color: #a3d89c;
+    padding: 2rem;
+    border-radius: 20px;
+    max-width: 1000px;
+    margin: 2rem auto;
+    text-align: center;
+  }
+  
+  .converter-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .currency-input, .currency-output {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1 1 300px;
+  }
+  
+  select, input[type="number"], input[disabled] {
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    width: 80%;
+    text-align: center;
+  }
+  
+  button#swap-btn {
+    font-size: 1.5rem;
+    background: white;
+    border: none;
+    border-radius: 50%;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+  }
+  
+  .signup {
+    background-color: #a8dce2;
+    text-align: center;
+    padding: 3rem 1rem;
+  }
+  
+  .signup h2 {
+    margin-bottom: 0.5rem;
+  }
+  
+  .signup p {
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .signup form {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  
+  .signup input[type="email"] {
+    padding: 0.5rem;
+    border: none;
+    border-radius: 10px;
+    width: 250px;
+  }
+  
+  .signup button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 10px;
+    background-color: #57ba98;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  @media (max-width: 768px) {
+    .converter-box {
+      flex-direction: column;
+    }
+  }
+  

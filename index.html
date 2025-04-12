@@ -1,45 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Travel Buddy</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Travel Buddy - Currency Converter</title>
+  <link rel="stylesheet" href="/styles.css" />
 </head>
 <body>
-  <h1>Travel Buddy</h1>
-  <nav>
-    <button onclick="showPage('explorer')">Country Explorer</button>
-    <button onclick="showPage('converter')">Currency Converter</button>
-    <button onclick="showPage('tips')">Travel Tips</button>
-  </nav>
+  <header class="header">
+    <img src="/images/Travel Buddy_logo.png" alt="Travel Buddy Logo" class="logo">
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#" class="active">Currency Converter</a></li>
+        <li><a href="#">Travel Tips</a></li>
+        <li><a href="#">Language</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <section id="explorer" class="page active">
-    <h2>Country Explorer</h2>
-    <input type="text" id="countryInput" placeholder="Enter a country name">
-    <button onclick="fetchCountry()">Search</button>
-    <div id="countryInfo" class="country-card"></div>
+  <section class="hero">
+    <h1>Convert Currencies Instantly<br>with Real-Time Exchange Rates</h1>
   </section>
 
-  <section id="converter" class="page">
+  <main class="converter-section">
     <h2>Currency Converter</h2>
-    <div class="converter">
-      <input type="number" id="amount" placeholder="Amount in USD">
-      <select id="currencySelect"></select>
-      <button onclick="convertCurrency()">Convert</button>
-      <p id="converted"></p>
+    <div class="converter-box">
+      <div class="currency-input">
+        <img id="from-flag" src="https://flagsapi.com/US/flat/64.png" alt="From Flag">
+        <select id="from-currency"></select>
+        <p>You Spend</p>
+        <input type="number" id="amount" value="1000" />
+        <small id="from-rate">$1 = </small>
+      </div>
+
+      <button id="swap-btn">&#8646;</button>
+
+      <div class="currency-output">
+        <img id="to-flag" src="https://flagsapi.com/JP/flat/64.png" alt="To Flag">
+        <select id="to-currency"></select>
+        <p>You Get</p>
+        <input type="text" id="converted-amount" disabled />
+        <small id="to-rate">$1 = </small>
+      </div>
     </div>
+  </main>
+
+  <section class="signup">
+    <h2>Find and Plan Your Next Trip with US!</h2>
+    <p>Travel Buddy will help you plan your perfect vacation and find the best destination for you</p>
+    <form>
+      <input type="email" placeholder="Email" required>
+      <button type="submit">Sign Up for New Deals</button>
+    </form>
   </section>
 
-  <section id="tips" class="page">
-    <h2>Travel Tips</h2>
-    <div class="tips">
-      <p><strong>General Safety:</strong> Keep copies of your passport and stay aware of your surroundings.</p>
-      <p><strong>Language:</strong> Learn a few basic phrases in the local language.</p>
-      <p><strong>Customs:</strong> Respect local customs and dress codes, especially at religious sites.</p>
-    </div>
-  </section>
-
-  <script src="script.js"></script>
+  <script src="index.js"></script>
 </body>
 </html>
